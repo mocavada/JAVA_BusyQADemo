@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+<div th:fragment="fBanner(text)" th:remove="all">
+    <span th:text="${text}"></span>
+</div>
+
+
+
+<span th:include="this :: fBanner(#{welcome})"></span> <span th:text="${shoppingCart.customer.name}"></span>
+
+<h2>Product information</h2>
+<table>
+    <tr th:each="product : ${shoppingCart.products}">
+        <td th:text="${product.name}"></td>
+    </tr>
+</table>
+
+<br/>
+
+<span th:include="this :: fBanner('This week all products 50% off!')"></span>
+
+</body>
+</html>

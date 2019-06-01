@@ -1,0 +1,46 @@
+
+//  mustache
+//    compile('com.samskivert:jmustache:1.13')
+//    compile('com.github.sps.mustache:mustache-spring-view:1.4')
+//    compile('com.github.spullara.mustache.java:compiler:0.9.5')
+
+//db
+//    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.3.0'
+//    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+//    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
+//    compile('com.h2database:h2')
+
+
+//log
+//	compile('org.springframework.boot:spring-boot-starter-log4j2')
+//	compile('org.springframework.boot:spring-boot-starter-logging')
+
+//test
+//    testCompile group: 'org.springframework.test.htmlunit', name: 'spring-test-htmlunit-build', version: '1.0.0.RC1'
+
+    //session - http
+//    compile('org.springframework.session:spring-session-core')
+//    compile('org.springframework.session:spring-session')
+//    compile group: 'org.springframework.session', name: 'spring-session', version: '1.3.3.RELEASE'
+
+    //redis
+//    compile('org.springframework.session:spring-session-data-redis')
+//    compile group: 'io.lettuce', name: 'lettuce-core', version: '5.1.0.M1'
+    //redis - unnecessary
+    //    compile('org.springframework.boot:spring-boot-starter-data-redis')
+
+    //session - jdbc
+//    compile group: 'org.springframework.session', name: 'spring-session-jdbc', version: '1.3.3.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.0.2.RELEASE'
+//    compile('org.springframework.session:spring-session-jdbc')
+//    compile('org.springframework.boot:spring-boot-starter-jdbc')
+//    compile group: 'org.springframework.session', name: 'spring-session', version: '1.3.3.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.0.2.RELEASE'
+
+    //security
+//    compile("org.springframework.boot:spring-boot-starter-security")
+
+    //jwt
+//    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.0'
+//    compile("org.springframework.boot:spring-boot-starter-security")
+//    compile("org.projectlombok:lombok:1.16.20")

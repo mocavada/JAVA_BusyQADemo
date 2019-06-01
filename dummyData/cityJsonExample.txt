@@ -1,0 +1,5 @@
+{
+    "userName": "Mazar-e-Sharif",
+    "district": "Balkh",
+    "population": "127800"
+}

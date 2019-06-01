@@ -1,0 +1,16 @@
+{ "squadName": "Super hero squad",
+  "formed": 2016,
+  "active": true,
+  "members": [{
+      "name": "Molecule Man",
+      "powers": [
+        "Radiation resistance",
+        "Radiation blast"
+      ]
+    },{
+      "name": null,
+      "powers": [
+        "Million tonne punch",
+        "Superhuman reflexes"
+  ]}]
+}

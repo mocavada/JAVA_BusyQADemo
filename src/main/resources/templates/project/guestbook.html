@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Guest Book</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+    <ul th:each="messageContent : ${messageList}">
+        <li class="card">
+            <div class="card-header">
+                <a th:href="'mailto:'+${messageContent.email}" th:text="${messageContent.userName}"
+                   class="float-left">James</a>
+                <span th:text="${messageContent.postDate}" class="float-right">April 1st, 2018</span>
+            </div>
+            <div class="card-body" th:text="${messageContent.messageContent}">
+                Have a nice day.
+            </div>
+        </li>
+    </ul>
+    <hr/>
+    <form action="/gustbook.html" method="post">
+        <div class="form-group">
+            <label style="display: block">Your Name:</label>
+            <input type="text" name="userName" value="" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Your email:</label>
+            <input type="email" name="email" value="" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Message:</label>
+            <textarea name="messageContent"
+                      placeholder="Leave your messageContent here."
+                      class="form-control"></textarea>
+        </div>
+
+        <input type="submit" value="Post My Message" class="btn btn-primary">
+    </form>
+
+</div>
+</body>
+</html>

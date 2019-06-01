@@ -1,0 +1,45 @@
+<header>Only define through Form</header>
+<form novalidate #f="ngForm">
+  <input type='text' placeholder='Input your userName' name='userName1' ngModel>
+</form>
+<p>
+    Form Variable: {{ f.value | json }}
+</p>
+<hr />
+
+
+<header>One way bind with Form data</header>
+<form novalidate #f2="ngForm">
+  <input type='text' placeholder='Input your userName' name='userName2' [ngModel]='variableX.userName'>
+</form>
+<p>
+  Form Data: {{ f2.value | json }}
+  <br />
+  TS: {{ variableX | json }}
+</p>
+<hr />
+
+<header>two way bind with Form data</header>
+<form novalidate #f3="ngForm">
+  Two way: <input type='text' placeholder='Input your userName' name='userName3' [(ngModel)]='variableY.userName'><br />
+
+</form>
+<p>
+  Form Data: {{ f3.value | json }}
+  <br />
+  TS: {{ variableY | json }}
+</p>
+<hr />
+
+<header>Variable declaration</header>
+<form novalidate #f4="ngForm">
+  Form data only: <input type='text' placeholder='Input your userName' name='userName4' #userName4='ngModel' ngModel><br />
+  Form data + TS: <input type='text' placeholder='Input your userName' name='userName5' #userName5='ngModel' [(ngModel)]='variableZ.userName'><br />
+</form>
+<p>
+  Form Data: {{ f4.value | json }}<br />
+  Form Variable: {{ userName4.value }}<br />
+  Form Variable: {{ userName5.value }}<br />
+  TS: {{ variableZ | json }}
+</p>
+<hr />

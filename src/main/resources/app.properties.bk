@@ -1,0 +1,72 @@
+################################################################
+# Database
+################################################################
+
+
+#spring.datasource.url=jdbc:mariadb://mysqlhost:3306/busyqademo
+#spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+
+################################################################
+# (2-b) pg - setup - 1 paste this to mysql workbench
+########
+#Use pgAdmin to create a new database called: newworld;
+
+########
+# (2-b) pg - setup - 2
+########
+#spring.datasource.platform=postgres
+#spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/newworld
+##spring.datasource.url=jdbc:postgresql://mypsql:5432/newworld //for docker and kubernete
+#spring.datasource.username=postgres
+#spring.datasource.password=psql
+#spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+#spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+
+################################################################
+# (2-c) H2 - setup
+########
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2
+#spring.datasource.url=jdbc:h2:file:~/newworld
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.datasource.driver-class-userName=org.h2.Driver
+
+
+
+################################################################
+# Session - REDIS
+################################################################
+# REDIS (RedisProperties)
+#spring.session.store-type=redis
+#spring.redis.host=127.0.0.1
+#spring.redis.port=6379
+#spring.redis.password=
+###
+#spring.redis.database=0
+#spring.redis.pool.max-active=8
+#spring.redis.pool.max-wait=-1
+#spring.redis.pool.max-idle=8
+#spring.redis.pool.min-idle=0
+#spring.redis.timeout=0
+
+################################################################
+# Session - DB
+################################################################
+#spring.session.store-type=jdbc
+#spring.session.jdbc.initialize-schema=always
+#spring.session.jdbc.initializer.enabled=true
+
+#spring.session.jdbc.table-userName=SPRING_SESSION
+#spring.session.jdbc.schema=classpath:org/springframework/session/jdbc/schema-postgresql.sql
+
+#server.session.cookie.max-age= 600
+#server.session.timeout= 600
+#spring.session.store-type=jdbc
+
+################################################################
+# JWT
+################################################################
+#jwt.token.secret=something-secret-you-cannot-keep-it
+#jwt.auth.header=x-auth-token# The header we are going to use for authentication
+#jwt.expire.hours=24# After how many hours the token will expire

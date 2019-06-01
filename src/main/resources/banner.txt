@@ -1,0 +1,4 @@
+--------------------------------------------------------------------------
+Application Name : ${application.title}
+Spring Boot Formatted Version : ${spring-boot.formatted-version}
+--------------------------------------------------------------------------

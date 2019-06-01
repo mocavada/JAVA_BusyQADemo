@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h2>Product information</h2>
+
+<table th:remove="all-but-first" border="1">
+    <tr th:each="product : ${productListKey}">
+        <td th:text="${product.description}"></td>
+        <td th:text="${'$' + #numbers.formatDecimal(product.price, 1, 2)}"></td>
+        <td th:text="${#dates.format(product.availableFrom, 'dd-MMM-yyyy')}"></td>
+
+        <!--if-->
+        <td>
+            <div th:if="${product.price lt 200}">Special offer!</div>
+            <div th:unless="${product.onStock}">Sold Out!</div>
+        </td>
+
+        <!--boolen-->
+        <td th:text="${product.onStock}"></td>
+
+        <!--boolen-->
+        <td th:text="${product.productType}"></td>
+
+        <!--switch-->
+        <td th:switch="${product.productType}">
+            <img th:case="${T(com.busyqa.course.pojo.ProductType).GAME}"
+                 th:src="@{/images/game.png}"/>
+            <img th:case="${T(com.busyqa.course.pojo.ProductType).BUSINESS}"
+                 th:src="@{/images/business.png}"/>
+            <img th:case="${T(com.busyqa.course.pojo.ProductType).HOME}"
+                 th:src="@{/images/home.png}"/>
+            <img th:case="*"
+                 th:src="@{/images/unknow.png}"/>
+        </td>
+
+
+    </tr>
+
+
+    <tr>
+        <td>Red chair</td>
+        <td>$350</td>
+        <td>28-Jun-2013</td>
+        <td>Special offer!</td>
+        <td>Sold Out!</td>
+        <td>28-Jun-2013</td>
+        <td>GAME</td>
+        <td><img src="../static/images/game.png"/></td>
+    </tr>
+</table>
+<hr/>
+
+<!-- Remove -->
+<table th:remove="all-but-first">
+    <tr th:each="product : ${productListKey}">
+        <td th:text="${product.description}">Red chair</td>
+    <tr>
+    <tr>
+        <td>Red chair</td>
+    </tr>
+    <tr>
+        <td>Red chair</td>
+    </tr>
+</table>
+</body>
+</html>

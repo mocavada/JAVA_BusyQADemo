@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h1>List all Links</h1>
+<table th:remove="all-but-first" border="1">
+    <tr th:each="item : ${handlerMethods}">
+        <td><a th:href="@{${item}}" th:text="${item}"></a></td>
+    </tr>
+</table>
+</body>
+</html>

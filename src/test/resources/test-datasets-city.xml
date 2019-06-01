@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <City id="100" userName="Giza" district="Governorate" population="28908000000" />
+  <City id="101" userName="Buenos Aires" district="Federal District" population="203000000" />
+  <City id="102" userName="Incheon" district="Metropolitan City" population="328550000000" />
+</dataset>

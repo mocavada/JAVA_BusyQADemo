@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h1>Bean values</h1>
+<h2>Product information</h2>
+<!--Define a fragment-->
+<div th:fragment="fGame" id="fGameIDwefwef" ui="wefwe" th:remove="all">
+    <img th:src="@{/images/game.png}"/>
+</div>
+
+
+<!--Refer the fragment-->
+<div th:include="this :: fGame"></div>
+<div th:include="this :: [//div[@id='fGameIDwefwef']]"></div>
+<div th:include="this :: [//div[@ui='wefwe']]"></div>
+
+
+<hr/>
+
+
+<!--Define fragment-->
+<div th:fragment="fHome(color, text)" th:remove="all">
+    <div th:attrappend="style='background:'+${color}">
+        <span th:text="${text}"></span>
+    </div>
+</div>
+
+<!--Refer the fragment and pass argument-->
+<div th:include="this :: fHome('green', 'TestArg')">Banner</div>
+
+
+<!--remove-->
+<div id="container" th:remove="tag">
+    <div>remove container tag</div>
+</div>
+
+<div th:remove="all">
+    <div>remove container tag</div>
+</div>
+
+</body>
+</html>

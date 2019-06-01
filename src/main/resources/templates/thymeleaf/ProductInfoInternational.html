@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h1>Bean values</h1>
+<h2>Product information</h2>
+<!--https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html-->
+<div th:switch="__${#locale.language}__">
+    <p th:case="en">English</p>
+    <p th:case="fr">French</p>
+    <p th:case="zh">繁體中文</p>
+    <p th:case="*">Other language</p>
+</div>
+<div th:text="#{lang}"></div>
+<dl>
+    <dt th:text="#{product.name}">Product</dt>
+    <dd th:text="${product.description}">Red chair</dd>
+
+    <dt th:text="#{product.price}">Product price</dt>
+    <dd th:text="${#numbers.formatDecimal(product.price, 1, 2)}">350</dd>
+
+    <dt th:text="#{product.available}">Product available from</dt>
+    <dd th:text="${#dates.format(product.availableFrom, 'dd-MMM-yyyy')}">28-Jun-2013</dd>
+</dl>
+</body>
+</html>

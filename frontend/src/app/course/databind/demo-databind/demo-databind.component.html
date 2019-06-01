@@ -1,0 +1,36 @@
+
+<div>
+  
+  <div> messageValue </div>
+
+  <div>One Way Bind - Interpolation:</div>
+  <div> {{messageValue}} </div>
+  <div class="{{cssValue}}">for Property</div>
+  <hr/>
+
+  <label>One Way Bind - Property - Output: </label>
+  <input [ngModel]="messageValue" placeholder="One Way Bind" style="width: 600px"/>
+  <!-- <input [ngModel]="messageValue" placeholder="One Way Bind" style="width: 600px"/> -->
+  <hr/>
+
+  <label>One Way Bind - Event - Input: </label>
+  <button type="submit" (click)="processString('AAA')">Change</button>
+  <hr/>
+
+
+  <label>Tow Way Bind - Form (ngModel): </label>
+  <br/>
+  <textarea [(ngModel)]="messageValue" placeholder="Tow Way Bind" style="width: 600px; height: 300px"></textarea>
+  <hr/>
+
+  <label>Variable Expression - define variable in html then use it: </label>
+  <input #someInput> {{someInput.value}} 
+
+  <hr/>
+
+  <label>Variable Expression - with ngForm </label>
+  <form novalidate #f4="ngForm">
+    <input name='someInput2' #someInput2='ngModel' ngModel> {{someInput2.value}}
+  </form>
+</div>
+

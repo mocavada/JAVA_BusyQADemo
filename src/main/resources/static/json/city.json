@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Kabul",
+    "district": "Kabol",
+    "population": "1780000"
+  },
+  {
+    "id": 2,
+    "name": "Qandahar",
+    "district": "Qandahar",
+    "population": "237500"
+  }
+]

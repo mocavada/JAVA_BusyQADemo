@@ -1,0 +1,189 @@
+<nav class="navbar navbar-expand-lg  navbar navbar-dark bg-primary">
+  <!-- <a class="navbar-brand" routerLink="">Welcome</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="/HtmlCss">HTML & CSS - reload page</a> -->
+        <a class="nav-link" [routerLink]="['HtmlCss']">HTML & CSS</a>
+      </li>
+
+      <!-- Angular -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Angular
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['Typescript']">Typescript</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="['DataBind']">DataBind</a>
+          <a class="dropdown-item" [routerLink]="['DataShare']">DataShare</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="['Pipe']">Pipe</a>
+        </div>
+      </li>
+
+      <!-- Routing-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Route
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="RoutingParameter/gaming/1">Game Product</a>
+          <!-- TODO: find angular -->
+          <a class="dropdown-item" routerLink="RoutingParameter/home/1">Home Product</a>
+          <a class="dropdown-item" [routerLink]="[ 'RoutingParameter', 'home', '2', {option1:'o1', option2:'o2'}]">
+            Home Product + option
+          </a>
+          <a class="dropdown-item" [routerLink]="['RoutingParameter', 'home', '2']" [queryParams]="{option1:'o1', option2:'o2'}">
+            Home Product + query
+          </a>
+        </div>
+      </li>
+
+      <!-- Directive -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Directive
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['Directive','DirectiveBuildin']">Buildin Directive</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLink]="['Directive','DirectiveStructural']">Structural Directive</a>
+          <a class="dropdown-item" [routerLink]="['Directive','DirectiveAttribute']">Attribute Directive</a>
+        </div>
+      </li>
+
+      <!-- Form -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Form
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['Form','FormNGModel']">ngModel</a>
+          <a class="dropdown-item" [routerLink]="['Form','FormTemplate']">Template</a>
+          <a class="dropdown-item" [routerLink]="['Form','FormModel']">Model</a>
+        </div>
+      </li>
+
+      <!-- HttpClient -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          HTTP
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['HTTP','HttpClient']">HttpClient</a>
+          <a class="dropdown-item" [routerLink]="['HTTP','HttpService']">HttpService</a>
+          <a class="dropdown-item" [routerLink]="['HTTP','UploadPic']">UploadPic</a>
+
+        </div>
+      </li>
+
+
+
+      <!-- RxJS -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          RxJS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['Promise']">Promise</a>
+          <a class="dropdown-item" [routerLink]="['RxJS','Observer']">Observer</a>
+          <a class="dropdown-item" [routerLink]="['RxJS','Subject']">Subject</a>
+          <a class="dropdown-item" [routerLink]="['RxJS','Operators']">Operators</a>
+          <a class="dropdown-item" [routerLink]="['RxJS','FromEvent']">From Event</a>
+
+        </div>
+      </li>
+
+      <!-- Coursework -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Coursework
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['CourseWork','FinancialTool']">Financial Tool</a>
+          <a class="dropdown-item" [routerLink]="['CourseWork','FinancialToolRefactor']">Financial Tool Refactor</a>
+          <a class="dropdown-item" [routerLink]="['CourseWork','TodoList']">Todo List</a>
+        </div>
+      </li>
+
+      <!-- project - jobbank -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Project - Job-Bank
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['ListJob']">Job List</a>
+          <a class="dropdown-item" [routerLink]="['JobUserLoginComponent']">Login</a>
+          <a class="dropdown-item" [routerLink]="['CheckLogin']">CheckLogin</a>
+          <a class="dropdown-item" [routerLink]="['PostJob']">Post a Job</a>
+        </div>
+      </li>
+
+      <!-- project - guestbook -->
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['GuestBook']"> Project - GuestBook</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+<div class="container">
+  <!-- <app-demo-datashare-input></app-demo-datashare-input>
+  <app-demo-fromevent></app-demo-fromevent> -->
+  <!-- <app-my-new-com></app-my-new-com> -->
+
+  <router-outlet></router-outlet>
+  <!--<app-test-component></app-test-component>-->
+  <!--<app-test-form-model></app-test-form-model>-->
+</div>
+
+
+
+<!-- <app-demo-databind></app-demo-databind> -->
+
+
+
+<!-- <button routerLink="">Welcome Page</button>
+<button [routerLink]="['HtmlCss']">HTML & CSS</button>
+<button [routerLink]="['Typescript']">Typescript</button>
+<button [routerLink]="['DataBind']">DataBind</button>
+<button [routerLink]="['DataShare']">DataShare</button>
+<button [routerLink]="['Pipe']">Pipe</button>
+
+<button routerLink="RoutingParameter/gaming/1">Gaming Product</button>
+<button [routerLink]="[ 'RoutingParameter', 'home', '2', {option1:'o1', option2:'o2'}]">Home Product</button>
+
+<button [routerLink]="['Directive','DirectiveBuildin']">Buildin Directive</button>
+<button [routerLink]="['Directive','DirectiveStructural']">Structural Directive </button>
+<button [routerLink]="['Directive','DirectiveAttribute']">Attribute Directive </button>
+
+<button [routerLink]="['Form','FormTemplate']">Form Template</button>
+<button [routerLink]="['Form','FormModel']">Form Model</button>
+
+<button [routerLink]="['HttpClient']">HttpClient</button> -->
+
+
+
+<!-- <br style="clear: both;" />
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div> -->

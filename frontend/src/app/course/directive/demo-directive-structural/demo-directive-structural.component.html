@@ -1,0 +1,47 @@
+<h2>MultiplyDirective</h2>
+<p *appMultiply=5>
+  ab
+</p>
+
+<hr/>
+
+<!-- ================================================================ -->
+
+<h2 id="appUnless">UnlessDirective</h2>
+<p>
+  The condition is currently
+  <span>{{condition}}</span>.
+  <button (click)="condition = !condition">
+    Toggle condition to {{!condition}}
+  </button>
+</p>
+
+
+<p *appUnless="condition">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition">
+  (B) Although the condition is true, this paragraph is displayed because appUnless is set to false.
+</p>
+
+
+<hr/>
+<h4>UnlessDirective with template</h4>
+
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
+
+<p *appUnless="true">
+  (A) &lt;p *appUnless="condition"&gt;
+</p>
+
+<ng-template [appUnless]="condition">
+  <p>
+    (A) &lt;ng-template [appUnless]="condition"&gt;
+  </p>
+</ng-template>
+
+<!-- ... -->
+<!--<p _ngcontent-c1=""> -->
+<!--(A) &lt;ng-template [appUnless]="condition"&gt;-->
+<!--</p>-->

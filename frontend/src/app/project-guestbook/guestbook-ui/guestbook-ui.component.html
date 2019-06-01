@@ -1,0 +1,39 @@
+<div class="container" style="margin-top: 25px">
+
+  <ul *ngFor="let item of messageList; let i = index">
+    <li class="card">
+      <div class="card-header">
+        <a href="mailto:{{item.email}}">{{item.userName}}</a>
+        <small class="float-right">{{item.postDate}}</small>
+      </div>
+      <div class="card-body">
+        {{item.messageContent}}
+      </div>
+    </li>
+  </ul>
+
+  <hr/>
+
+
+  <form class="form-group" [formGroup]="msgCreateForm" (ngSubmit)="onSubmit(msgCreateForm)">
+
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" value="" placeholder="Your Name" class="form-control" formControlName="userName"/>
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="text" value="" placeholder="Your Email" class="form-control" formControlName="email"/>
+    </div>
+
+    <div class="form-group">
+      <label>Message:</label>
+      <textarea placeholder="Your Message" class="form-control" rows="7" formControlName="messageContent"></textarea>
+
+    </div>
+    <input type="submit" value="Post" class="btn btn-primary">
+
+  </form>
+
+</div>

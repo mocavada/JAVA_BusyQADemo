@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+{{>header}}
+{{messageContent}}
+
+<h1>Bean values</h1>
+<h2>Product information</h2>
+<dl>
+    {{#product}}
+        <dt>Product userName</dt>
+        <dd>{{description}}</dd>
+
+        <dt>Product price</dt>
+        <dd>{{price}}</dd>
+
+        <dt>Product available from</dt>
+        <dd>{{availableFrom}}</dd>
+    {{/product}}
+</dl>
+</body>
+</html>

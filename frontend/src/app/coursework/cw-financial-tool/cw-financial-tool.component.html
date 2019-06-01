@@ -1,0 +1,41 @@
+<header>Question 1:</header>
+<div>
+  <div>
+    You deposits
+    <input type="text" value="" id="annuity" [(ngModel)]="annuity"/> at the beginning of the year and at the end of
+    each
+    month in an account that pays
+    <input type="text" value="" id="interestRate" [(ngModel)]="interestRate"/> compounded monthly for
+    <input type="text" value="" id="period" [(ngModel)]="period"/> year(s). What is the amount in the account at the
+    end?
+    <button class="btn btn-outline" type="button" (click)="cal()">Calculate</button>
+  </div>
+
+
+  <header>Summery:</header>
+  <ul>
+    <li>annuity: {{annuity}}</li>
+    <li>result: {{result}}</li>
+  </ul>
+
+
+  <header>Result:</header>
+  <div>
+    <input type="text" value="" id="amount" [(ngModel)]="ammount"/> is the amount in the account at the end.
+  </div>
+
+</div>
+<hr/>
+
+<!-- 
+  <header>Question 2: Find the result based on the compounded rate.</header>
+Deposit: <input type="text" value="" [(ngModel)]="deposit2"/> <br/>
+Rate: <input type="text" value="" [(ngModel)]="interestRate2"/> % <br/>
+Years: <input type="text" value="" [(ngModel)]="year2"/> <br/>
+
+<button class="btn btn-outline" type="button" (click)="onAdd()">Calculate</button><br/>
+
+
+Result: <input type="text" value="" id="location" [(ngModel)]="result2"/>  is the amount in the account at the end.
+<br/> 
+-->

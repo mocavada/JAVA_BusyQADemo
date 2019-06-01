@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<h1>Bean values</h1>
+<h2>Product information</h2>
+<dl>
+    <dt>Product Description</dt>
+    <dd th:text="${product.description}">Red chair</dd>
+
+    <dt>Product price</dt>
+    <dd th:text="${#numbers.formatDecimal(product.price, 1, 5)}">350</dd>
+
+    <dt>Product available from</dt>
+    <dd th:text="${#dates.format(product.availableFrom, 'dd-MMM-yyyy')}">28-Jun-2013</dd>
+</dl>
+</body>
+</html>

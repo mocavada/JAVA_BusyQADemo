@@ -1,0 +1,50 @@
+<form [formGroup]="myform" (ngSubmit)="onSubmit(myform)">
+
+  <fieldset formGroupName="name">
+    <div>
+      <label>First Name</label>
+      <input type="text" formControlName="firstName">
+    </div>
+    <div>
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+    </div>
+  </fieldset>
+
+
+  <label>Email</label>
+  <input type="email" formControlName="email">
+
+  <div>
+    <label>Password</label>
+    <input type="password" formControlName="password">
+  </div>
+
+  <div>
+    <label>Language</label>
+    <select formControlName="language">
+      <option value="">Please select a language</option>
+      <option *ngFor="let lang of langs" [value]="lang">{{lang}}
+      </option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="!myform.valid">Submit</button>
+
+  <pre>form==> {{myform.value | json}}</pre>
+  <pre>status==> {{myform.status |json }}</pre>
+  <pre>pristine==> {{myform.pristine |json }}</pre>
+  <pre>untouched==> {{myform.untouched |json }}</pre>
+</form>
+
+
+<!-- <form [formGroup]="myform">
+  <fieldset formGroupName="name">
+    <input type="text" formControlName="firstName">
+    <input type="text" formControlName="lastName">
+  </fieldset>
+  <input type="email" formControlName="email">
+  <input type="password" formControlName="password">
+  <select formControlName="language">
+    <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
+  </select>
+</form> -->
